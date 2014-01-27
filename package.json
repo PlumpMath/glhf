@@ -2,7 +2,7 @@
   "name": "glhf",
   "version": "0.7.3",
   "description": "good luck have fun",
-  "main": "server.coffee",
+  "main": "server.js",
   "bin": {
     "glhf": "bin/glhf"
   },
