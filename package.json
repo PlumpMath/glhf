@@ -1,0 +1,25 @@
+{
+  "name": "glhf",
+  "version": "0.7.3",
+  "description": "good luck have fun",
+  "main": "server.coffee",
+  "bin": {
+    "glhf": "bin/glhf"
+  },
+  "scripts": {
+    "test": "mocha test --compilers coffee:coffee-script"
+  },
+  "keywords": [
+    "glhf"
+  ],
+  "author": "am",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "coffee-script": "~1.6.3"
+  },
+  "dependencies": {
+    "optimist": "~0.6.0",
+    "underscore": "~1.5.2",
+    "express": "~3.4.8"
+  }
+}

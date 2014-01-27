@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>GLHF</title>
+<meta
+  name="viewport"
+  content="width=device-width, height=device-height, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link rel="stylesheet" href="normalize.css" />
+<link rel="stylesheet" href="base.css" />
+<!-- Platform is super slow and buggy. Use canary. -->
+<!--<script src="platform.js"></script>-->
+
+<script>
+console.info = function(text) {
+  document.querySelector('#info').textContent = text;
+}
+
+console.time('register gadget')
+window.addEventListener('gadgetRegistered', function(e){
+  console.log('registered', e.detail);
+  console.timeEnd('register gadget');
+
+  var instance = document.createElement(e.detail.tag);
+  document.querySelector('#container').appendChild(instance);
+})
+</script>
+</head>
+
+<body touch-action="none">
+  <header id="toolbar">
+    <span id="info"></span>
+    <a id="logo" href="#" title="Versal Foundation"></a>
+  </header>
+
+  <div id="container" touch-action="pan-y"></div>
+</body>
+
+<%if(manifest.entry){ %><link rel="import" href="/<%= manifest.entry %>" /><%}%>
+</html>
