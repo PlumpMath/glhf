@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="normalize.css" />
 <link rel="stylesheet" href="base.css" />
 <!-- Platform is super slow and buggy. Use canary. -->
-<!--<script src="platform.js"></script>-->
+<script src="platform.js"></script>
 
 <script>
 console.info = function(text) {
@@ -33,7 +33,7 @@ window.addEventListener('gadgetRegistered', function(e){
     <a id="logo" href="#" title="Versal Foundation"></a>
   </header>
 
-  <div id="container" touch-action="pan-y"></div>
+  <div id="container"></div>
 </body>
 
 <%if(manifest.entry){ %><link rel="import" href="/<%= manifest.entry %>" /><%}%>
